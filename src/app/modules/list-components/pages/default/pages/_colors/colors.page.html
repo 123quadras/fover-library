@@ -1,0 +1,26 @@
+<div class="container-page">
+
+    <!-- Title -->
+    <h1 class="title">Cores</h1>
+
+    <!-- Messages -->
+    <p class="message">As cores são parte fundamental de qualquer projeto, com a fover você pode adicionar várias cores padronizadas.</p>
+    <p class="message">Para usar os icones basta utilizar sass em seu projeto e utilizar o atributo `var()` como no exemplo à baixo:</p>
+
+    <!-- Colos -->
+    <div class="container-card-colors">
+        <ng-container *ngFor="let item of colors">
+            <div class="container-color">
+    
+                <!-- Card color -->
+                <div 
+                    class="card-color"
+                    [style.background-color]="item.hexa">
+                </div>
+    
+                <!-- Title -->
+                <p class="title">{{ item.name }}</p>
+            </div>
+        </ng-container>
+    </div>
+</div>

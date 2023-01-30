@@ -1,0 +1,17 @@
+@import 'src/assets/styles/main.scss';
+
+.list-cards
+{
+    position: fixed;
+    right: 15px;
+    bottom: calc(50px + 16px);
+    z-index: 7;
+}
+
+@media screen and (max-width: 700px) 
+{
+    .list-cards
+    {
+        width: calc(100% - 30px);
+    }
+}

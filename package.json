@@ -1,0 +1,49 @@
+{
+  "name": "fover-library",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "ng serve",
+    "buildIcons": "fantasticon projects/fover-library-lib/src/lib/assets/icons -o projects/fover-library-lib/src/lib/assets/icons/icons-font -p fover --normalize true",
+    "copyIcons": "cp -r ./projects/fover-library-lib/src/lib/assets/icons/icons-font ./dist/fover-library-lib/assets",
+    "build": "ng build fover-library",
+    "buildLib": "ng build fover-library-lib && npm run buildIcons && npm run copyIcons",
+    "publish": "npm run buildLib && cd dist/fover-library-lib && npm publish",
+    "dockerfile": "docker image build -t fover-library ./ && docker container run --rm -p 8090:80 fover-library"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^12.2.16",
+    "@angular/common": "^12.2.16",
+    "@angular/compiler": "^12.2.16",
+    "@angular/core": "^12.2.16",
+    "@angular/forms": "^12.2.16",
+    "@angular/platform-browser": "^12.2.16",
+    "@angular/platform-browser-dynamic": "^12.2.16",
+    "@angular/router": "^12.2.16",
+    "fantasticon": "^1.2.3",
+    "fover-library": "^0.0.26",
+    "ng-packagr": "^12.2.7",
+    "ngx-clipboard": "^14.0.2",
+    "ngx-monaco-editor": "^12.0.0",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^12.2.17",
+    "@angular/cli": "~12.2.17",
+    "@types/jasmine": "~4.0.0",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "^8.26.0",
+    "html-loader": "^4.2.0",
+    "jasmine-core": "~4.1.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "typescript": "~4.3.5"
+  }
+}

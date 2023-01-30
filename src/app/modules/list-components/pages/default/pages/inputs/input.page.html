@@ -1,0 +1,164 @@
+<!-- Title -->
+<div class="container-title">
+    <h1 class="title">Inputs</h1>
+</div>
+
+<div class="container-page">
+
+    <!-- Default -->
+    <div class="container-example-body">
+        <h1 class="title">Default</h1>
+    
+        <!-- Message -->
+        <p class="message">Estiliza um input passado no child content. Todos os inputs deve ter 'formControlName' para mapear o input.</p>
+    
+        <div class="container-example" [formGroup]="formGroup">
+            
+            <!-- Example Component -->
+            <fover-input>
+                <input 
+                    placeholder="Digite aqui..."
+                    formControlName="email" />
+            </fover-input>
+    
+            <!-- Options itens -->
+            <div class="container-options-itens">
+                <i 
+                    class="icon-options fover-document-copy"
+                    (click)="copyCodeDefault()">
+                </i>
+                <i 
+                    class="icon-options"
+                    [class.fover-eye-slash]="showCodeDefault"
+                    [class.fover-document-code]="!showCodeDefault"
+                    (click)="showCodeDefault = !showCodeDefault">
+                </i>
+            </div>
+    
+            <!-- Codes -->
+            <fover-editor
+                *ngIf="showCodeDefault"
+                [code]="codeDefault">
+            </fover-editor>
+        </div>
+    </div>
+
+    <!-- Com labels -->
+    <div class="container-example-body">
+        <h1 class="title">Com labels</h1>
+    
+        <!-- Message -->
+        <p class="message">Adiciona uma label no input.</p>
+    
+        <div class="container-example" [formGroup]="formGroup">
+            
+            <!-- Example Component -->
+            <fover-input 
+                [label]="'Input com label'">
+                <input 
+                    placeholder="Digite aqui..."
+                    formControlName="email" />
+            </fover-input>
+    
+            <!-- Options itens -->
+            <div class="container-options-itens">
+                <i 
+                    class="icon-options fover-document-copy"
+                    (click)="copyCodeWithLabel()">
+                </i>
+                <i 
+                    class="icon-options"
+                    [class.fover-eye-slash]="showCodeWithLabel"
+                    [class.fover-document-code]="!showCodeWithLabel"
+                    (click)="showCodeWithLabel = !showCodeWithLabel">
+                </i>
+            </div>
+    
+            <!-- Codes -->
+            <fover-editor
+                *ngIf="showCodeWithLabel"
+                [code]="codeWithLabel">
+            </fover-editor>
+        </div>
+    </div>
+
+    <!-- Com warnings -->
+    <div class="container-example-body">
+        <h1 class="title">Com warnings</h1>
+    
+        <!-- Message -->
+        <p class="message">Adiciona um warning no header do input, para alertar usuários.</p>
+    
+        <div class="container-example" [formGroup]="formGroup">
+            
+            <!-- Example Component -->
+            <fover-input 
+                [label]="'Input com warning'"
+                [waningTooltip]="'Ao sair do campo `CEP` nós iremos buscar o endereço baseado no CEP descrito.'">
+                <input 
+                    placeholder="Digite aqui..."
+                    formControlName="email" />
+            </fover-input>
+    
+            <!-- Options itens -->
+            <div class="container-options-itens">
+                <i 
+                    class="icon-options fover-document-copy"
+                    (click)="copyCodeWithWarning()">
+                </i>
+                <i 
+                    class="icon-options"
+                    [class.fover-eye-slash]="showCodeWithWarning"
+                    [class.fover-document-code]="!showCodeWithWarning"
+                    (click)="showCodeWithWarning = !showCodeWithWarning">
+                </i>
+            </div>
+    
+            <!-- Codes -->
+            <fover-editor
+                *ngIf="showCodeWithWarning"
+                [code]="codeWithWarning">
+            </fover-editor>
+        </div>
+    </div>
+
+    <!-- Com Loadings -->
+    <div class="container-example-body">
+        <h1 class="title">Com loading</h1>
+    
+        <!-- Message -->
+        <p class="message">Adiciona um loading no lado direito do input e bloqueia o input até que o loading pare.</p>
+    
+        <div class="container-example" [formGroup]="formGroup">
+            
+            <!-- Example Component -->
+            <fover-input 
+                [label]="'Input com loading'"
+                [loading]="true">
+                <input 
+                    placeholder="Digite aqui..."
+                    formControlName="withLoading" />
+            </fover-input>
+    
+            <!-- Options itens -->
+            <div class="container-options-itens">
+                <i 
+                    class="icon-options fover-document-copy"
+                    (click)="copyCodeWithLoading()">
+                </i>
+                <i 
+                    class="icon-options"
+                    [class.fover-eye-slash]="showCodeWithLoading"
+                    [class.fover-document-code]="!showCodeWithLoading"
+                    (click)="showCodeWithLoading = !showCodeWithLoading">
+                </i>
+            </div>
+    
+            <!-- Codes -->
+            <fover-editor
+                *ngIf="showCodeWithLoading"
+                [code]="codeWithLoading">
+            </fover-editor>
+        </div>
+    </div>
+</div>

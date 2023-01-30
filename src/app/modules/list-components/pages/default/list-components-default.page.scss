@@ -1,0 +1,12 @@
+@import "src/assets/styles/main.scss";
+
+.container-page
+{
+    display: flex;
+
+    .container-body
+    {
+        width: 100%;
+        padding: 60px 0 0 200px;
+    }
+}

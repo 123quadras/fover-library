@@ -1,0 +1,49 @@
+@import 'src/assets/styles/main.scss';
+
+.container-page
+{
+    padding: 52px;
+    box-sizing: border-box;
+
+    .title
+    {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+
+    .message
+    {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .container-card-colors
+    {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        grid-gap: 12px;
+        padding: 5px;
+
+        .container-color
+        {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            grid-gap: 12px;
+
+            .card-color
+            {
+                width: 60px;
+                height: 60px;
+                border-radius: 10px;
+                border: solid 1px var(--border);
+            }
+
+            .title
+            {
+                font-size: 14px;
+            }
+        }
+    }
+}

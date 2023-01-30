@@ -1,0 +1,42 @@
+<nav class="container-menu">
+    
+    <!-- Icones -->
+    <div class="container-item">
+        <div class="container-itens-components">
+            <div 
+                [routerLink]="'/list-components/icons'"
+                [routerLinkActive]="'active'"
+                class="item">Icones
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cores -->
+    <div class="container-item">
+        <div class="container-itens-components">
+            <div 
+                [routerLink]="'/list-components/colors'"
+                [routerLinkActive]="'active'"
+                class="item">Cores
+            </div>
+        </div>
+    </div>
+
+    <!-- Componentes -->
+    <div class="container-item">
+        
+        <!-- Title -->
+        <h2 class="title">Componentes</h2>
+
+        <!-- Itens -->
+        <div class="container-itens-components">
+            <ng-container *ngFor="let item of listItens">
+                <div 
+                    [routerLink]="'/list-components/' + item.routerLink"
+                    [routerLinkActive]="'active'"
+                    class="item">{{ item.description }}
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</nav>

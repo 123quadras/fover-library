@@ -1,0 +1,32 @@
+@import "src/assets/styles/main.scss";
+
+.container-menu
+{
+    position: fixed;
+    background-color: var(--background-cards);
+    height: calc(100vh - 60px);
+    width: 200px;
+    margin-top: 60px;
+
+    .title
+    {
+        padding: 12px;
+        font-size: 17px;
+    }
+
+    .container-itens-components
+    {
+        .item
+        {
+            padding: 12px;
+            color: var(--placeholder);
+            cursor: pointer;
+
+            &.active
+            {
+                background-color: var(--primary);
+                color: var(--title);
+            }
+        }
+    }
+}

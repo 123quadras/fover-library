@@ -1,0 +1,31 @@
+@import 'src/assets/styles/main.scss';
+
+.fover-tooltip
+{
+    $border-radius: 10px;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    border-radius: $border-radius;
+    font-family: Arial;
+    padding: 7px 8px;
+    font-size: 13px;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 18px;
+    transform: translateX(-50%);
+    color: var(--title);
+
+    &::before 
+    {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: $border-radius solid transparent;
+        border-right: $border-radius solid transparent;
+        border-bottom: $border-radius solid black;
+        position: absolute;
+        left: calc(50% - 5px);
+        top: -5px;
+    }
+}

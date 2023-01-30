@@ -1,0 +1,254 @@
+@import 'src/assets/styles/main.scss';
+
+::ng-deep
+{
+    ::placeholder
+    {
+        color: var(--placeholder);
+    }
+
+    input
+    {
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+        width: 100%;
+        height: 100%;
+        padding: 0 18px;
+        box-sizing: border-box;
+        outline: none;
+        font-size: 16px;
+        transition: 0.3s ease-in-out;
+        color: var(--title);
+        border: solid 1px var(--border);
+        background-color: var(--background-cards);
+
+        &:focus
+        {
+            box-shadow: 
+                0 0 0 2px var(--background-page), 
+                0 0 0 4px var(--primary), 
+                0 1px 2px 0 transparent;
+        }
+    }
+}
+
+.container-input
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &.height-xl 
+    {
+        ::ng-deep
+        {
+            input
+            {
+                height: 60px;
+                border-radius: 23px;
+            }
+
+            i
+            {
+                &.icon-right, &.icon-left
+                {
+                    bottom: 21px;
+                }
+            }
+        }
+    }
+    
+    &.height-l 
+    {
+        ::ng-deep
+        {
+            input
+            {
+                height: 53px;
+                border-radius: 19px;
+            }
+
+            i
+            {
+                &.icon-right, &.icon-left
+                {
+                    bottom: 17px;
+                }
+            }
+        }
+    }
+
+    &.height-default
+    {
+        ::ng-deep
+        {
+            input
+            {
+                height: 45px;
+                border-radius: 16px;
+            }
+
+            i
+            {
+                &.icon-right, &.icon-left
+                {
+                    bottom: 14px;
+                }
+            }
+        }
+    }
+
+    &.height-small 
+    {
+        ::ng-deep
+        {
+            input
+            {
+                height: 40px;
+                border-radius: 14px;
+            }
+
+            i
+            {
+                &.icon-right, &.icon-left
+                {
+                    bottom: 11px;
+                }
+            }
+        }
+    }
+
+    &.height-mini 
+    {
+        ::ng-deep
+        {
+            input
+            {
+                height: 36px;
+                border-radius: 10px;
+            }
+
+            i
+            {
+                &.icon-right, &.icon-left
+                {
+                    bottom: 9px;
+                }
+            }
+        }
+    }
+
+    &.has-error
+    {
+        ::ng-deep
+        {
+            input
+            {
+                border-color: var(--error);
+            }
+        }
+    }
+
+    @mixin iconDefault 
+    {
+        position: absolute;
+        height: 19px;
+        font-size: 21px;
+    }
+
+    &.icon-right
+    {
+        ::ng-deep
+        {
+            input
+            {
+                padding-right: 34px;
+            }
+        }
+
+        i
+        {
+            &.icon-right
+            {
+                @include iconDefault();
+                right: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.icon-left
+    {
+        ::ng-deep
+        {
+            input
+            {
+                padding-left: 34px;
+            }
+        }
+
+        i
+        {
+            &.icon-left
+            {
+                @include iconDefault();
+                left: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.loading
+    {
+        ::ng-deep
+        {
+            input
+            {
+                padding-right: 40px;
+            }
+        }
+    }
+
+    .container-header
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6px;
+
+        .label
+        {
+            margin-bottom: 0;
+            text-align: start;
+            font-size: 14px;
+            color: var(--title);
+        }
+
+        .tooltip-warning
+        {
+            height: 16px;
+            font-size: 16px;
+        }
+    }
+
+    .message-error
+    {
+        margin-top: 4px;
+        font-size: 12px;
+        color: var(--error);
+        text-align: start;
+    }
+
+    .container-loading
+    {
+        position: absolute;
+        top: 12px;
+        right: 8px;
+
+        &.loading-with-label
+        {
+            top: 28px;
+        }
+    }
+}

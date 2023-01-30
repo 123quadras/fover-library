@@ -1,0 +1,14 @@
+{
+  "name": "fover-library",
+  "version": "0.0.27",
+  "peerDependencies": {
+    "@angular/common": ">=9.0.0",
+    "@angular/core": ">=9.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "keywords": ["angular", "components", "components", "design systems"],
+  "author": "Guilherme Nunes da Silva",
+  "license": "ISC"
+}

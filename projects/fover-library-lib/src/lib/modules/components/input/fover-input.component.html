@@ -1,0 +1,57 @@
+<div 
+    class="container-input"
+    [class.icon-right]="iconRight"
+    [class.icon-left]="iconLeft"
+    [class.loading]="loading"
+    [class.has-error]="hasError()"
+    [ngClass]="
+        'height-' + height + ' '
+    ">
+
+    <!-- Header -->
+    <div class="container-header">
+        
+        <!-- Label -->
+        <label class="label">{{ label }}</label>
+
+        <!-- Warning -->
+        <i 
+            *ngIf="waningTooltip"
+            class="fover-warning-2 tooltip-warning"
+            [foverTooltip]="waningTooltip">
+        </i>
+    </div>
+
+    <!-- Icon right -->
+    <i 
+        *ngIf="iconRight"
+        class="icon-right"
+        [class]="iconRight"
+        (click)="clickIconRight()">
+    </i>
+    
+    <!-- Icon left -->
+    <i 
+        *ngIf="iconLeft"
+        class="icon-left"
+        [class]="iconLeft"
+        (click)="clickIconLeft()">
+    </i>
+
+    <!-- Inputs -->
+    <ng-content></ng-content>
+    
+    <!-- Message error -->
+    <p 
+        class="message-error"
+        *ngIf="hasError()">{{ errorMessage || "Campo inválido." }}
+    </p>
+
+    <!-- Loading -->
+    <div 
+        *ngIf="loading" 
+        class="container-loading"
+        [class.loading-with-label]="label">
+        <fover-loading></fover-loading>
+    </div>
+</div>
