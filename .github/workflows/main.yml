@@ -1,1 +1,21 @@
+name: Deploy app DigitalOcean
 
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions:checkout@v2
+
+      - name: Update SHA
+        run: echo $GITHUB_SHA > $GITHUB_WORKSPACE/app/_meta
+
+      - name: Build image
+        run: docker build -t registry.digitalocean.com/foverbr/fover-library:$(echo $GITHUB_SHA | head -c7) .
