@@ -9,6 +9,6 @@ RUN npm install -g @angular/cli@12
 RUN npm build
 
 ### STAGE 2: Run ###
-FROM nginx:1.21.4-alpine
+FROM nginx
 COPY --from=build /usr/local/app/dist/fover-library /usr/share/nginx/html
 EXPOSE 80
