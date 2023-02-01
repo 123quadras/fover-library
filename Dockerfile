@@ -6,7 +6,7 @@ COPY ./ /usr/local/app/
 
 RUN npm install
 RUN npm install -g @angular/cli@12
-RUN npm build
+RUN npm run build
 
 ### STAGE 2: Run ###
 FROM nginx
