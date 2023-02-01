@@ -18,7 +18,7 @@ jobs:
         run: docker build -t registry.digitalocean.com/foverbr/fover-library:$(echo $GITHUB_SHA | head -c7) .
 
       - name: Install doctl
-        run: digitalocean/action-doctl@v2
+        uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_TOKEN }}
         
