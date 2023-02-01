@@ -10,5 +10,5 @@ RUN npm build
 
 ### STAGE 2: Run ###
 FROM nginx
-COPY --from=build /usr/local/app/dist/fover-library /usr/share/nginx/html
+COPY --from=build /usr/local/app/dist/fover-library/ /usr/share/nginx/html
 EXPOSE 80
