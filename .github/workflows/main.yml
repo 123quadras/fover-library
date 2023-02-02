@@ -36,3 +36,6 @@ jobs:
 
       - name: Deploy
         run: kubectl apply -f $GITHUB_WORKSPACE/kubernetes/deployment.yml
+
+      - name: Verify deploy
+        run: kubectl rollout status deployment/fover-library-deploy
