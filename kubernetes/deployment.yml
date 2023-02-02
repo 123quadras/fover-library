@@ -1,33 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dep-accounts-portal
+  name: dep-fover-library
 spec:
   replicas: 3
   template:
     metadata:
-      name: pod-accounts-portal
+      name: pod-fover-library
       labels:
-        app: pod-accounts-portal
+        app: pod-fover-library
     spec:
       containers:
-        - name: container-accounts-portal
-          image: accounts-portal
+        - name: container-fover-library
+          image: fover-library
           imagePullPolicy: Never
           ports:
             - containerPort: 80
   selector:
     matchLabels:
-      app: pod-accounts-portal
+      app: pod-fover-library
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: svc-accounts-portal
+  name: svc-fover-library
 spec:
   type: NodePort
   ports:
     - port: 80
       nodePort: 30002
   selector:
-    app: pod-accounts-portal
+    app: pod-fover-library
