@@ -11,8 +11,8 @@ spec:
         app: pod-fover-library
     spec:
       containers:
-        - name: container-fover-library
-          image: fover-library
+        - name: foverbr
+          image: <IMAGE>
           ports:
             - containerPort: 80
   selector:
