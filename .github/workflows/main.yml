@@ -21,6 +21,7 @@ jobs:
   Deploy:
     name: Deploy in Digital Ocean
     runs-on: ubuntu-latest
+    needs: build
 
     steps:
       - name: Install doctl
