@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CoreRoutingModule } from './core-routing.module';
 import { MenuTopComponent } from './pages/default/components/menu-top/menu-top.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AddTitleModule, ThemeEnum, ThemeModule } from 'fover-library';
+import { AddTitleModule, FoverButtonModule, ThemeEnum, ThemeModule } from 'fover-library';
 
 @NgModule({
     declarations: [
@@ -16,6 +16,7 @@ import { AddTitleModule, ThemeEnum, ThemeModule } from 'fover-library';
         BrowserAnimationsModule,
         CoreRoutingModule,
         AddTitleModule,
+        FoverButtonModule,
         ThemeModule.forRoot({
             active: ThemeEnum.light
         })

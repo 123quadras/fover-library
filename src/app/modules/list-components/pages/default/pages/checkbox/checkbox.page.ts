@@ -3,25 +3,20 @@ import { FoverNotificationService } from 'fover-library';
 import { ClipboardService } from 'ngx-clipboard';
 
 @Component({
-    selector: 'fover-notifications-page',
-    templateUrl: './notifications.page.html',
-    styleUrls: ['./notifications.page.scss']
+    selector: 'fover-checkbox-page',
+    templateUrl: './checkbox.page.html',
+    styleUrls: ['./checkbox.page.scss']
 })
-export class NotificationPage 
+export class CheckboxPage 
 {
     public codeDefault: string;
     public showCodeDefault: boolean;
 
     constructor(
-        private _foverNotificationService: FoverNotificationService,
         private _clipboardService: ClipboardService,
+        private _foverNotificationService: FoverNotificationService,
     ) {
-        this.codeDefault = require('html-loader!./examples/default.ts').default;
-    }
-
-    public emitNotification(): void
-    {
-        this._foverNotificationService.success(["Essa é uma notificação de teste"]);
+        this.codeDefault = require('html-loader!./examples/default.html').default;
     }
 
     public copyCodeDefault(): void 

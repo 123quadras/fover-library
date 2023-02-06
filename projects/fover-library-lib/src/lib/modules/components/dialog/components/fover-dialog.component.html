@@ -1,0 +1,42 @@
+<div class="container-background-modal"></div>
+
+<!-- Content -->
+<div class="container-content">
+    
+    <!-- Title -->
+    <p class="title">{{ dialogData.title || 'Adicione um título' }}</p>
+
+    <!-- Description -->
+    <p class="description">{{ dialogData.description || 'Adicione uma descrição/mensagem' }}</p>
+
+    <!-- Checkbox confirmation -->
+    <fover-checkbox
+        [label]="dialogData.checkboxText || 'Check para confirmar'"
+        [value]="checkConfirmation"
+        [hasError]="checkConfirmationInvalid"
+        (onChangeValue)="
+            $event == true ? checkConfirmationInvalid = false : checkConfirmationInvalid = true;
+            checkConfirmation = $event;
+        ">
+    </fover-checkbox>
+
+    <!-- Loading -->
+    <fover-loading
+        *ngIf="dialogData.loading">
+    </fover-loading>
+
+    <!-- Options confirmations -->
+    <div class="container-options">
+        
+        <!-- Cancelar -->
+        <fover-button
+            [type]="'secondary'"
+            (click)="close()">{{ dialogData.cancelText || 'Cancelar' }}
+        </fover-button>
+
+        <!-- Confirmar -->
+        <fover-button (click)="confirm()">
+            {{ dialogData.confirmText || 'Confirmar' }}
+        </fover-button>
+    </div>
+</div>

@@ -19,8 +19,10 @@ import { ButtonOptions, BUTTON_OPTIONS } from './button-options';
 })
 export class FoverButtonModule 
 {
-    static forRoot(_options: ButtonOptions): ModuleWithProviders<FoverButtonModule> 
+    static forRoot(_options?: ButtonOptions): ModuleWithProviders<FoverButtonModule> 
     {
+        if (!_options) _options = new ButtonOptions();
+
         return {
             ngModule: FoverButtonModule,
             providers: 

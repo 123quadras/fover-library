@@ -1,0 +1,11 @@
+<div class="form-check" [class.has-error]="hasError">
+  <input 
+    [id]="id"  
+    [checked]="value"
+    (click)="setValue(!value)"
+    type="checkbox" />
+  
+    <label 
+        [for]="id">{{ label }}
+    </label>
+</div>

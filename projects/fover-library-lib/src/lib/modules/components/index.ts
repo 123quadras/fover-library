@@ -4,5 +4,7 @@ export { FoverAlertComponent, FoverAlertModule } from "./alert";
 export { FoverLoadingComponent, FoverLoadingModule } from "./loading";
 export { FoverTooltipModule, FoverTooltipComponent, FoverTooltipDirective } from "./tooltip";
 export { FoverModalComponent, FoverModalModule } from "./modal";
+export { FoverCheckboxComponent, FoverCheckboxModule } from "./checkbox";
 export { FoverNotificationAreaComponent, FoverNotificationCardComponent, FoverNotificationModel, FoverNotificationModule, FoverNotificationService, FoverNotificationStatusEnum, } from "./notification";
+export { FoverDialogComponent, FoverDialogDataModel, FoverDialogEventsEnum, FoverDialogModule, FoverDialogService, FoverDialogTypeEnum } from "./dialog";
 export { FoverComponentsModule } from "./fover-componentes.module";

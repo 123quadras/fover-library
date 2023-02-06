@@ -6,9 +6,11 @@ import { ButtonPage } from './pages/default/pages/buttons/buttons.page';
 import { InputPage } from './pages/default/pages/inputs/input.page';
 import { LoadingPage } from './pages/default/pages/loadings/loading.page';
 import { ModalPage } from './pages/default/pages/modals/modal.page';
-import { NotificationPage } from './pages/default/pages/notifications/notifications.page';
 import { IconPage } from './pages/default/pages/_icons/icons.page';
 import { ColorsPage } from './pages/default/pages/_colors/colors.page';
+import { DialogPage } from './pages/default/pages/dialog/dialog.page';
+import { NotificationPage } from './pages/default/pages/notifications/notifications.page';
+import { CheckboxPage } from './pages/default/pages/checkbox/checkbox.page';
 
 const routes: Routes = [
     { 
@@ -24,6 +26,8 @@ const routes: Routes = [
             { path: "notifications", component: NotificationPage, },
             { path: "loadings", component: LoadingPage, },
             { path: "modals", component: ModalPage, },
+            { path: "dialogs", component: DialogPage, },
+            { path: "checkbox", component: CheckboxPage, },
         ]
     }
 ];

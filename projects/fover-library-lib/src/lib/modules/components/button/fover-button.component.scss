@@ -78,6 +78,18 @@
         }
     }
 
+    &.type-secondary
+    {
+        background-color: transparent;
+        background-color: #0071FF20;
+        color: var(--primary);
+
+        &:hover
+        {
+            background-color: #0071FF40;
+        }
+    }
+
     &.type-border
     {
         background-color: transparent;

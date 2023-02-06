@@ -19,10 +19,12 @@ export class MenuLateralComponent implements OnInit
         this.listItens = [
             { routerLink: "buttons", description: "Buttons" },
             { routerLink: "inputs", description: "Inputs" },
+            { routerLink: "dialogs", description: "Dialogs" },
             { routerLink: "alerts", description: "Alerts" },
             { routerLink: "notifications", description: "Notifications" },
             { routerLink: "loadings", description: "Loadings" },
             { routerLink: "modals", description: "Modals" },
+            { routerLink: "checkbox", description: "Checkbox" },
         ];
 
         this.listItens.sort((a, b) => (a.description > b.description) ? 1 : -1);

@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FoverEditorComponent implements OnInit
 {
     @Input() language: 'typescript' | 'html' = 'html';
-
+    @Input() code: string = "Digite o código que vai aparecer na tela";
     @Input() editorOptions = {
         theme: 'vs-dark', 
         language: 'html',
@@ -18,7 +18,6 @@ export class FoverEditorComponent implements OnInit
             enabled: false
         },
     };
-    @Input() code: string = "Digite o código que vai aparecer na tela";
 
     ngOnInit(): void 
     {

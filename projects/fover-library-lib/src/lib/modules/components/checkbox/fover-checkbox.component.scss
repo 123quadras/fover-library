@@ -1,0 +1,15 @@
+@mixin pointer
+{
+    cursor: pointer;
+}
+
+.form-check, input, label
+{
+    @include pointer();
+    transition: 0.2s ease-in-out;
+
+    &.has-error
+    {
+        color: var(--error);
+    }
+}
