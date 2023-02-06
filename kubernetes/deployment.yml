@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dep-fover-library
-  namespace: fover-library
 spec:
   replicas: 1
   template:
@@ -24,9 +23,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: svc-fover-library
-  namespace: fover-library
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - protocol: TCP 
       port: 80
