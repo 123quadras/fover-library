@@ -13,3 +13,22 @@
         color: var(--error);
     }
 }
+
+.form-check
+{
+    display: flex;
+    align-items: center;
+    grid-gap: 6px;
+
+    input
+    {
+        margin: 0;
+        height: 14px;
+        width: 14px;
+    }
+
+    label
+    {
+        margin: 0;
+    }
+}
