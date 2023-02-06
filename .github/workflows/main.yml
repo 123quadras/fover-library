@@ -17,13 +17,6 @@ jobs:
       - name: Build image
         run: docker build -t registry.digitalocean.com/foverbr/fover-library:$(echo $GITHUB_SHA | head -c7) .
 
-
-  Deploy:
-    name: Deploy in Digital Ocean
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
         with:
@@ -45,4 +38,16 @@ jobs:
         run: kubectl apply -f $GITHUB_WORKSPACE/kubernetes/deployment.yml
 
       - name: Verify deploy
-        run: kubectl rollout status deployment/dep-fover-library        
+        run: kubectl rollout status deployment/dep-fover-library
+    
+  check_deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v3
+
+      - name: Verify deploy
+        run: kubectl rollout status deployment/dep-fover-library
