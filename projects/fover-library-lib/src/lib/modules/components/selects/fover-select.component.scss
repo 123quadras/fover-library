@@ -1,6 +1,6 @@
 @import 'src/assets/styles/main.scss';
 
-$border-radius: 7px;
+$border-radius: 16px;
 $border: solid 1px var(--border);
 $background-color: var(--background-cards);
 
@@ -14,6 +14,20 @@ $background-color: var(--background-cards);
         align-items: center;
         justify-content: space-between;
         margin-bottom: 6px;
+
+        .select-label
+        {
+            margin-bottom: 0;
+            text-align: start;
+            font-size: 14px;
+            color: var(--title);
+        }
+
+        .tooltip-warning
+        {
+            height: 16px;
+            font-size: 16px;
+        }
     }
 
     .container-select-body
