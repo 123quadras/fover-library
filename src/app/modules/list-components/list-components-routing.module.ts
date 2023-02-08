@@ -11,6 +11,7 @@ import { ColorsPage } from './pages/default/pages/_colors/colors.page';
 import { DialogPage } from './pages/default/pages/dialog/dialog.page';
 import { NotificationPage } from './pages/default/pages/notifications/notifications.page';
 import { CheckboxPage } from './pages/default/pages/checkbox/checkbox.page';
+import { SelectPage } from './pages/default/pages/selects/select.page';
 
 const routes: Routes = [
     { 
@@ -28,6 +29,7 @@ const routes: Routes = [
             { path: "modals", component: ModalPage, },
             { path: "dialogs", component: DialogPage, },
             { path: "checkbox", component: CheckboxPage, },
+            { path: "selects", component: SelectPage, },
         ]
     }
 ];

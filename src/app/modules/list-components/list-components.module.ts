@@ -13,10 +13,11 @@ import { ClipboardModule } from 'ngx-clipboard';
 import { NotificationPage } from './pages/default/pages/notifications/notifications.page';
 import { LoadingPage } from './pages/default/pages/loadings/loading.page';
 import { ModalPage } from './pages/default/pages/modals/modal.page';
-import { FoverCheckboxModule, FoverComponentsModule, FoverDialogModule } from 'fover-library';
+import { FoverComponentsModule } from 'fover-library';
 import { ColorsPage } from './pages/default/pages/_colors/colors.page';
 import { DialogPage } from './pages/default/pages/dialog/dialog.page';
 import { CheckboxPage } from './pages/default/pages/checkbox/checkbox.page';
+import { SelectPage } from './pages/default/pages/selects/select.page';
 
 @NgModule({
     declarations: [
@@ -32,6 +33,7 @@ import { CheckboxPage } from './pages/default/pages/checkbox/checkbox.page';
         ModalPage,
         DialogPage,
         CheckboxPage,
+        SelectPage,
     ],
     imports: [
         CommonModule,
@@ -40,8 +42,6 @@ import { CheckboxPage } from './pages/default/pages/checkbox/checkbox.page';
         FoverEditorModule,
         ClipboardModule,
         FoverComponentsModule,
-        FoverDialogModule,
-        FoverCheckboxModule,
     ],
     exports: [
         ListComponentsDefaultPage

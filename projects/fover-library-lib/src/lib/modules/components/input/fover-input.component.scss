@@ -18,7 +18,7 @@
         box-sizing: border-box;
         outline: none;
         font-size: 16px;
-        transition: 0.3s ease-in-out;
+        transition: $transition;
         color: var(--title);
         border: solid 1px var(--border);
         background-color: var(--background-cards);
@@ -236,8 +236,8 @@
     {
         margin-top: 4px;
         font-size: 12px;
-        color: var(--error);
         text-align: start;
+        color: var(--error);
     }
 
     .container-loading

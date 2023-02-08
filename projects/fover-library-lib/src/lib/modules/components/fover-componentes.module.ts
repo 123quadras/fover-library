@@ -8,6 +8,7 @@ import { FoverNotificationModule } from './notification';
 import { FoverTooltipModule } from './tooltip';
 import { FoverDialogModule } from './dialog';
 import { FoverCheckboxModule } from './checkbox';
+import { FoverSelectModule } from './selects';
 
 @NgModule({
     exports: [
@@ -20,6 +21,7 @@ import { FoverCheckboxModule } from './checkbox';
         FoverTooltipModule,
         FoverDialogModule,
         FoverCheckboxModule,
+        FoverSelectModule,
     ],
 })
 export class FoverComponentsModule {}

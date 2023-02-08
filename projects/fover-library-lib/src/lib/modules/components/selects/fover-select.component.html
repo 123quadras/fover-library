@@ -1,0 +1,74 @@
+<div 
+    class="container-select"
+    [class.loading]="loading"
+    [class.has-error]="false">
+
+    <!-- Header -->
+    <div class="container-header">
+        
+        <!-- Label -->
+        <label class="label">{{ label }}</label>
+
+        <!-- Warning -->
+        <i 
+            *ngIf="waningTooltip"
+            class="fover-warning-2 tooltip-warning"
+            [foverTooltip]="waningTooltip">
+        </i>
+    </div>
+
+    <!-- Select -->
+    <div class="container-select-body" (click)="isShowItens = !isShowItens">
+
+        <!-- placeholder -->
+        <p 
+            *ngIf="!itemSelected"
+            class="placeholder">{{ loading ? 'Carregando' : placeholder }}
+        </p>
+
+        <!-- Item selecionado -->
+        <p *ngIf="itemSelected">{{ itemSelected.description }}</p>
+
+        <!-- Arrow open/close -->
+        <i 
+            *ngIf="!loading"
+            class="fover-arrow-right-3 arrow-icon"
+            [class.open]="isShowItens">
+        </i>
+
+        <!-- Loading -->
+        <div 
+            *ngIf="loading" 
+            class="container-loading"
+            [class.loading-with-label]="label">
+            <fover-loading></fover-loading>
+        </div>
+    </div>
+
+    <!-- Itens -->
+    <div *ngIf="isShowItens" class="container-items">
+
+        <!-- Lista vazia -->
+        <ng-container *ngIf="listOptions.length <= 0">
+            <p class="empty-text">Nenhum item foi passado.</p>
+        </ng-container>
+        
+        <!--  -->
+        <ng-container *ngIf="listOptions.length > 0">
+            <ng-container *ngFor="let item of listOptions">
+                <div 
+                    class="item" 
+                    [class.active]="item.active"
+                    (click)="selectItem(item)">
+                    <p>{{ item.description }}</p>
+                </div>
+            </ng-container>
+        </ng-container>
+    </div>
+    
+    <!-- Message error -->
+    <p 
+        *ngIf="hasRequiredError || errorMessage"
+        class="message-error">{{ errorMessage || "Campo inválido." }}
+    </p>
+</div>
