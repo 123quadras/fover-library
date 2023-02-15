@@ -1,6 +1,6 @@
 {
   "name": "fover-library",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "peerDependencies": {
     "@angular/common": ">=9.0.0",
     "@angular/core": ">=9.0.0"
