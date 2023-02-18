@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PresentationDefaultPage 
 {
-    public title: string = "Comece seus projetos 3 passos à frente.";
+    public title: string = "Comece seus projetos 5 passos à frente.";
 
     constructor(private _router: Router) {}
 
