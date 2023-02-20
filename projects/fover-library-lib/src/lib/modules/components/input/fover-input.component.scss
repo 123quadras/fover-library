@@ -21,7 +21,6 @@
         transition: $transition;
         color: var(--title);
         border: solid 1px var(--border);
-        background-color: var(--background-cards);
 
         &:focus
         {
@@ -139,6 +138,39 @@
         }
     }
 
+    &.background-1
+    {
+        ::ng-deep
+        {
+            input
+            {
+                background-color: var(--background-cards);
+            }
+        }
+    }
+    
+    &.background-2
+    {
+        ::ng-deep
+        {
+            input
+            {
+                background-color: var(--background-cards-2);
+            }
+        }
+    }
+    
+    &.background-3
+    {
+        ::ng-deep
+        {
+            input
+            {
+                background-color: var(--background-cards-3);
+            }
+        }
+    }
+
     &.has-error
     {
         ::ng-deep
@@ -234,7 +266,7 @@
 
     .message-error
     {
-        margin-top: 4px;
+        margin-top: 8px;
         font-size: 12px;
         text-align: start;
         color: var(--error);

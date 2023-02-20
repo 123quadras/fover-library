@@ -1,7 +1,10 @@
 <div 
     class="container-select"
     [class.loading]="loading"
-    [class.has-error]="false">
+    [class.has-error]="hasRequiredError || errorMessage"
+    [ngClass]="
+        'background-' + backgroundColor
+    ">
 
     <!-- Header -->
     <div class="container-header">
@@ -18,7 +21,9 @@
     </div>
 
     <!-- Select -->
-    <div class="container-select-body" (click)="isShowItens = !isShowItens">
+    <div 
+        class="container-select-body"
+        (click)="isShowItens = !isShowItens">
 
         <!-- placeholder -->
         <p 

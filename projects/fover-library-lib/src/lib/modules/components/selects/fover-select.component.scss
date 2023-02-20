@@ -2,11 +2,53 @@
 
 $border-radius: 16px;
 $border: solid 1px var(--border);
-$background-color: var(--background-cards);
 
 .container-select
 {
     position: relative;
+
+    &.has-error
+    {
+        .container-select-body
+        {
+            border: solid 1px var(--error);
+        }
+    }
+
+    &.background-1
+    {
+        .container-select-body, .container-items
+        {
+            background-color: var(--background-cards);
+        }
+    }
+    
+    &.background-2
+    {
+        .container-select-body, .container-items
+        {
+            background-color: var(--background-cards-2);
+        }
+    }
+    
+    &.background-3
+    {
+        .container-select-body, .container-items
+        {
+            background-color: var(--background-cards-3);
+        }
+
+        .container-items
+        {
+            .item
+            {
+                &:hover, &.active
+                {
+                    background-color: var(--background-cards);
+                }
+            }
+        }
+    }
 
     .container-header
     {
@@ -46,7 +88,6 @@ $background-color: var(--background-cards);
         color: var(--title);
         border: $border;
         border-radius: $border-radius;
-        background-color: $background-color;
 
         &:focus
         {
@@ -84,7 +125,6 @@ $background-color: var(--background-cards);
         padding: 12px 0;
         border: $border;
         border-radius: $border-radius;
-        background-color: $background-color;
 
         .empty-text
         {
@@ -107,7 +147,7 @@ $background-color: var(--background-cards);
 
     .message-error
     {
-        margin-top: 4px;
+        margin-top: 8px;
         font-size: 12px;
         text-align: start;
         color: var(--error);

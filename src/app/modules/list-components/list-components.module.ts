@@ -18,6 +18,9 @@ import { ColorsPage } from './pages/default/pages/_colors/colors.page';
 import { DialogPage } from './pages/default/pages/dialog/dialog.page';
 import { CheckboxPage } from './pages/default/pages/checkbox/checkbox.page';
 import { SelectPage } from './pages/default/pages/selects/select.page';
+import { FoverInputModule } from 'projects/fover-library-lib/src/public-api';
+import { InputPageModule } from './pages/default/pages/inputs/input.page.module';
+import { SelectPageModule } from './pages/default/pages/selects/select.page.module';
 
 @NgModule({
     declarations: [
@@ -26,14 +29,12 @@ import { SelectPage } from './pages/default/pages/selects/select.page';
         IconPage,
         ColorsPage,
         ButtonPage,
-        InputPage,
         AlertPage,
         NotificationPage,
         LoadingPage,
         ModalPage,
         DialogPage,
         CheckboxPage,
-        SelectPage,
     ],
     imports: [
         CommonModule,
@@ -42,6 +43,9 @@ import { SelectPage } from './pages/default/pages/selects/select.page';
         FoverEditorModule,
         ClipboardModule,
         FoverComponentsModule,
+        // Componentes pages
+        InputPageModule,
+        SelectPageModule,
     ],
     exports: [
         ListComponentsDefaultPage

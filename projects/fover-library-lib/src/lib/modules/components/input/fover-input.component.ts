@@ -15,6 +15,7 @@ export class FoverInputComponent implements AfterViewInit, AfterContentInit, OnC
     @Input() waningTooltip: string;
     @Input() errorMessage: string;
     @Input() loading: boolean;
+    @Input() backgroundColor: '1' | '2' | '3' = '1';
     @Output() iconLeftClick = new EventEmitter();
     @Output() iconRightClick = new EventEmitter();
     @ContentChild('isPassword') child: ElementRef;

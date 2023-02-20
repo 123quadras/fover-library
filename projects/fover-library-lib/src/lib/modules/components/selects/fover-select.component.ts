@@ -15,6 +15,7 @@ export class FoverSelectComponent implements OnInit
     @Input() errorMessage: string;
     @Input() hasRequiredError: boolean;
     @Input() loading: boolean;
+    @Input() backgroundColor: '1' | '2' | '3' = '3';
     @Output() selected = new EventEmitter<FoverSelectOptionModel>();
     public isShowItens: boolean;
     public itemSelected: FoverSelectOptionModel;
