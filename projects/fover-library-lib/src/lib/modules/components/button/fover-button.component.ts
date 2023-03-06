@@ -1,6 +1,6 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { ButtonOptions, BUTTON_OPTIONS } from './button-options';
-import { Theme, ThemeService } from 'fover-library';
+import { Theme, ThemeService } from '../../theme';
 
 @Component({
     selector: 'fover-button',

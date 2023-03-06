@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FoverSelectOptionModel } from './models/fover-select-option.model';
-import { Theme, ThemeService } from 'fover-library';
+import { Theme, ThemeService } from '../../theme';
 
 @Component({
     selector: 'fover-select',
