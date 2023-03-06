@@ -1,0 +1,27 @@
+<header-page
+    [title]="'Modals'">
+</header-page>
+
+<div class="container-page">
+    
+    <!-- Title -->
+    <examples-titles
+        [title]="'Com loading'"
+        [subTitle]="'Gera uma casca de modal para você complementar com o conteúdo desejado.'">
+    </examples-titles>
+
+    <!-- Example -->
+    <container-example [codeCopy]="codeDefault">
+        <fover-button
+            (click)="showModal = true;">Abrir modal
+        </fover-button>
+    </container-example>
+</div>
+
+<!-- Modal -->
+<fover-modal
+    *ngIf="showModal"
+    [title]="'Modal da Fover'"
+    [widthPixel]="600"
+    (close)="showModal = false;">
+</fover-modal>

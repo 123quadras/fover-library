@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigHelp } from 'src/app/helpers/config.help';
 
 @Component({
     selector: 'menu-lateral',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class MenuLateralComponent implements OnInit
 {
     public listItens: { routerLink: string, description: string }[] = [];
+
+    constructor(public _configHelp: ConfigHelp) {}
 
     ngOnInit(): void 
     {

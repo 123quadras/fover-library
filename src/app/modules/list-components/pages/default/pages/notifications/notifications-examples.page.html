@@ -1,0 +1,19 @@
+<header-page
+    [title]="'Notifications'">
+</header-page>
+
+<div class="container-page">
+
+    <!-- Title -->
+    <examples-titles
+        [title]="'Default'"
+        [subTitle]="'Gera uma notificação, para usar a instância da notificação é necessário instânciar no construtor da classe que irá utilizar.'">
+    </examples-titles>
+
+    <!-- Example -->
+    <container-example [codeCopy]="codeDefault">
+        <fover-button
+            (click)="emitNotification()">Emitir notificação
+        </fover-button>
+    </container-example>
+</div>

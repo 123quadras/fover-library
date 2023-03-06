@@ -1,0 +1,61 @@
+<header-page
+    [title]="'Buttons'">
+</header-page>
+
+<div class="container-page">
+
+    <!-- Default -->
+    <div class="container-item">
+
+        <!-- Titles -->
+        <examples-titles
+            [title]="'Default'"
+            [subTitle]="'Gera um botão personalizado com a cor padrão do sistema.'">
+        </examples-titles>
+    
+        <!-- Example -->
+        <container-example [codeCopy]="codeDefault">
+            <fover-button>Primary default</fover-button>
+        </container-example>
+    </div>
+
+    <!-- Types -->
+    <div class="container-item">
+
+        <!-- Titles -->
+        <examples-titles
+            [title]="'Tipos de botões'"
+            [subTitle]="'Gera um botão personalizado com a cor de acordo com o tipo.'">
+        </examples-titles>
+    
+        <!-- Example -->
+        <container-example [codeCopy]="codeTypes">
+            <div class="container-examples-types">
+                <fover-button>Primary default</fover-button>
+                <fover-button [type]="'transparent'">Transparent</fover-button>
+                <fover-button [type]="'border'">Border</fover-button>
+            </div>
+        </container-example>
+    </div>
+
+    <!-- height -->
+    <div class="container-item">
+
+        <!-- Titles -->
+        <examples-titles
+            [title]="'Tamanhos de botões'"
+            [subTitle]="'Você pode escolher o tamanho do botão que desejar.'">
+        </examples-titles>
+    
+        <!-- Example -->
+        <container-example [codeCopy]="codeSizes">
+            <div class="container-examples-types">
+                <fover-button [height]="'mini'">Primary default</fover-button>
+                <fover-button [height]="'small'">Primary default</fover-button>
+                <fover-button>Primary default</fover-button>
+                <fover-button [height]="'l'">Primary default</fover-button>
+                <fover-button [height]="'xl'">Primary default</fover-button>
+            </div>
+        </container-example>
+    </div>
+</div>

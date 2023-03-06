@@ -3,17 +3,27 @@
 .container-menu
 {
     position: fixed;
-    background-color: var(--background-cards);
     height: calc(100vh - 60px);
     width: 200px;
     margin-top: 60px;
     z-index: 1;
     border-right: solid 1px var(--border);
 
+    &.dark
+    {
+        background-color: var(--background-cards-2);
+    }
+    
+    &.light
+    {
+        background-color: var(--background-cards);
+    }
+
     .title
     {
         padding: 12px;
         font-size: 17px;
+        color: var(--title);
     }
 
     .container-itens-components
@@ -21,13 +31,25 @@
         .item
         {
             padding: 12px;
-            color: var(--placeholder);
             cursor: pointer;
+            color: var(--placeholder);
 
-            &.active
+            &.dark
             {
-                background-color: var(--primary);
-                color: var(--title);
+                &.active
+                {
+                    color: var(--title);
+                    background-color: var(--primary);
+                }
+            }
+            
+            &.light
+            {
+                &.active
+                {
+                    color: var(--primary);
+                    background-color: var(--primary-background);
+                }
             }
         }
     }

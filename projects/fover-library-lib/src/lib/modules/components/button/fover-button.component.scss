@@ -16,8 +16,17 @@
     cursor: pointer;
     width: 100%;
     transition: $transition;
-    color: var(--title);
     background-color: var(--primary);
+
+    &.light
+    {
+        color: var(--background-cards);
+    }
+
+    &.dark
+    {
+        color: var(--title);
+    }
 
     &:disabled
     {

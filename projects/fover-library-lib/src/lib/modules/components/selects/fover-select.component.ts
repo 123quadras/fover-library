@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FoverSelectOptionModel } from './models/fover-select-option.model';
+import { Theme, ThemeService } from 'fover-library';
 
 @Component({
     selector: 'fover-select',
@@ -19,10 +20,14 @@ export class FoverSelectComponent implements OnInit
     @Output() selected = new EventEmitter<FoverSelectOptionModel>();
     public isShowItens: boolean;
     public itemSelected: FoverSelectOptionModel;
+    public theme: Theme;
+
+    constructor(private _themeService: ThemeService) {}
 
     ngOnInit(): void 
     {
         this.hasItemSelected();
+        this.theme = this._themeService.getActiveTheme();
     }
 
     private hasItemSelected(): void

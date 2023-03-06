@@ -1,9 +1,23 @@
-<nav class="container-header">
+<nav class="container-header" setThemeNameClass>
 
     <!-- Container logo -->
-    <div class="container-logo" addTitle [title]="title">
+    <div 
+        class="container-logo" 
+        addTitle 
+        [title]="title"
+        [routerLink]="['']">
         
         <!-- Title -->
         <h1 class="menu-top-title">{{title}}</h1>
+    </div>
+
+    <!-- Options -->
+    <div class="container-options">
+
+        <!-- Theme change -->
+        <div class="container-item" (click)="changeTheme()">
+            <i *ngIf="theme.name == 'dark'" class="fover-sun-1"></i>
+            <i *ngIf="theme.name == 'light'" class="fover-moon"></i>
+        </div>
     </div>
 </nav>

@@ -15,36 +15,50 @@ $border: solid 1px var(--border);
         }
     }
 
-    &.background-1
+    &.light
     {
-        .container-select-body, .container-items
+        &.background-1, &.background-2, &.background-3
         {
-            background-color: var(--background-cards);
-        }
-    }
-    
-    &.background-2
-    {
-        .container-select-body, .container-items
-        {
-            background-color: var(--background-cards-2);
-        }
-    }
-    
-    &.background-3
-    {
-        .container-select-body, .container-items
-        {
-            background-color: var(--background-cards-3);
-        }
-
-        .container-items
-        {
-            .item
+            .container-select-body, .container-items
             {
-                &:hover, &.active
+                background-color: var(--background-cards);
+            }
+        }
+    }
+
+    &.dark
+    {
+        &.background-1
+        {
+            .container-select-body, .container-items
+            {
+                background-color: var(--background-cards);
+            }
+        }
+        
+        &.background-2
+        {
+            .container-select-body, .container-items
+            {
+                background-color: var(--background-cards-2);
+            }
+        }
+        
+        &.background-3
+        {
+            .container-select-body, .container-items
+            {
+                background-color: var(--background-cards-3);
+            }
+    
+            .container-items
+            {
+                .item
                 {
-                    background-color: var(--background-cards);
+                    &:hover, &.active
+                    {
+                        background-color: var(--background-cards);
+                    }
                 }
             }
         }

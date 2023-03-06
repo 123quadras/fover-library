@@ -1,0 +1,21 @@
+<header-page
+    [title]="'Dialogs'">
+</header-page>
+
+<div class="container-page">
+
+    <!-- Title -->
+    <examples-titles
+        [title]="'Default'"
+        [subTitle]="'Gera um dialog de confirmação.'">
+    </examples-titles>
+
+    <!-- Example -->
+    <container-example 
+        [codeCopy]="codeDefault"
+        [language]="'typescript'">
+        <fover-button
+            (click)="openDialog()">Abrir dialog
+        </fover-button>
+    </container-example>
+</div>

@@ -1,0 +1,27 @@
+<header-page
+    [title]="'Selects'">
+</header-page>
+
+<div class="container-page">
+
+    <!-- Default -->
+    <div class="container-example-body">
+
+        <!-- Title -->
+        <examples-titles
+            [title]="'Default'"
+            [subTitle]="'Estiliza um select no mesmo formato de um fover-input.'">
+        </examples-titles>
+
+        <!-- Example -->
+        <container-example [codeCopy]="codeDefault">
+            <fover-select
+                [label]="'teste'"
+                [placeholder]="'teste'"
+                [waningTooltip]="'teste'"
+                [listOptions]="listOptions"
+                (selected)="itemClicked($event)">
+            </fover-select>
+        </container-example>
+    </div>
+</div>

@@ -12,9 +12,14 @@
     height: 60px;
     padding: 0 21px;
     box-sizing: border-box;
-    box-shadow: $box-shadow;
     transition: $transition;
     background-color: var(--background-cards);
+    
+    &.light
+    {
+        box-shadow: $box-shadow-light;
+        border-bottom: solid 1px var(--border);
+    }
     
     .container-logo
     {
@@ -27,7 +32,29 @@
         .menu-top-title
         {
             font-size: 2.3vh;
-            font-family: 'Josefin Sans', sans-serif;
+        }
+    }
+
+    .container-options
+    {
+        .container-item
+        {
+            $size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: $size;
+            height: $size;
+            border-radius: $size;
+            cursor: pointer;
+            color: var(--title);
+            background-color: var(--border);
+
+            i
+            {
+                height: 16px;
+                font-size: 16px;
+            }
         }
     }
 }

@@ -13,6 +13,6 @@ export class ListComponentsDefaultPage
         private _viewContainerRef: ViewContainerRef,
     ) 
     {
-        this._foverDialogService.setRootViewContainerRef(_viewContainerRef);
+        this._foverDialogService.setRootViewContainerRef(this._viewContainerRef);
     }
 }

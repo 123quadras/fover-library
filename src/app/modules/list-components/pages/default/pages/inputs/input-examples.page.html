@@ -1,0 +1,87 @@
+<header-page
+    [title]="'Inputs'">
+</header-page>
+
+<div class="container-page" [formGroup]="formGroup">
+
+    <!-- Default -->
+    <div class="container-example-body">
+
+        <!-- Title -->
+        <examples-titles
+            [title]="'Default'"
+            [subTitle]="'Estiliza um input passado no child content. Todos os inputs deve ter `formControlName` para mapear o input.'">
+        </examples-titles>
+    
+        <!-- Example -->
+        <container-example [codeCopy]="codeDefault">
+            <fover-input>
+                <input 
+                    placeholder="Digite aqui..."
+                    formControlName="email" />
+            </fover-input>
+        </container-example>
+    </div>
+
+    <!-- Com labels -->
+    <div class="container-example-body">
+
+        <!-- Title -->
+        <examples-titles
+            [title]="'Com labels'"
+            [subTitle]="'Adiciona uma label no input.'">
+        </examples-titles>
+    
+        <!-- Example -->
+        <container-example [codeCopy]="codeWithLabel">
+            <fover-input 
+                [label]="'Input com label'">
+                <input 
+                    placeholder="Digite aqui..."
+                    formControlName="email" />
+            </fover-input>
+        </container-example>
+    </div>
+
+    <!-- Com warnings -->
+    <div class="container-example-body">
+
+        <!-- Title -->
+        <examples-titles
+            [title]="'Com warnings'"
+            [subTitle]="'Adiciona um warning no header do input, para alertar usuários.'">
+        </examples-titles>
+    
+        <!-- Example -->
+        <container-example [codeCopy]="codeWithWarning">
+            <fover-input 
+                [label]="'Input com warning'"
+                [waningTooltip]="'Ao sair do campo `CEP` nós iremos buscar o endereço baseado no CEP descrito.'">
+                <input 
+                    placeholder="Digite aqui..."
+                    formControlName="email" />
+            </fover-input>
+        </container-example>
+    </div>
+
+    <!-- Com Loadings -->
+    <div class="container-example-body">
+
+        <!-- Title -->
+        <examples-titles
+            [title]="'Com loading'"
+            [subTitle]="'Adiciona um loading no lado direito do input e bloqueia o input até que o loading pare.'">
+        </examples-titles>
+    
+        <!-- Example -->
+        <container-example [codeCopy]="codeWithLoading">
+            <fover-input 
+                [label]="'Input com loading'"
+                [loading]="true">
+                <input 
+                    placeholder="Digite aqui..."
+                    formControlName="withLoading" />
+            </fover-input>
+        </container-example>
+    </div>
+</div>

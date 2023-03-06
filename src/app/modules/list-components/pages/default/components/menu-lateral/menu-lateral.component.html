@@ -1,12 +1,13 @@
-<nav class="container-menu">
+<nav setThemeNameClass class="container-menu">
     
     <!-- Icones -->
     <div class="container-item">
         <div class="container-itens-components">
             <div 
+                setThemeNameClass
+                class="item"
                 [routerLink]="'/list-components/icons'"
-                [routerLinkActive]="'active'"
-                class="item">Icones
+                [routerLinkActive]="'active'">Icones
             </div>
         </div>
     </div>
@@ -15,9 +16,10 @@
     <div class="container-item">
         <div class="container-itens-components">
             <div 
+                setThemeNameClass
+                class="item"
                 [routerLink]="'/list-components/colors'"
-                [routerLinkActive]="'active'"
-                class="item">Cores
+                [routerLinkActive]="'active'">Cores
             </div>
         </div>
     </div>
@@ -32,9 +34,10 @@
         <div class="container-itens-components">
             <ng-container *ngFor="let item of listItens">
                 <div 
+                    setThemeNameClass
+                    class="item"
                     [routerLink]="'/list-components/' + item.routerLink"
-                    [routerLinkActive]="'active'"
-                    class="item">{{ item.description }}
+                    [routerLinkActive]="'active'">{{ item.description }}
                 </div>
             </ng-container>
         </div>

@@ -1,0 +1,27 @@
+@import 'src/assets/styles/main.scss';
+
+.container-title
+{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    padding: 12px;
+    
+    &.light
+    {
+        background-color: var(--background-cards-2);
+        border-left: solid 1px var(--border);
+        border-bottom: solid 1px var(--border);
+    }
+    
+    &.dark
+    {
+        background-color: var(--background-cards-3);
+        border-bottom: solid 1px var(--background-cards-2);
+    }
+
+    .title
+    {
+        font-size: 21px;
+    }
+}

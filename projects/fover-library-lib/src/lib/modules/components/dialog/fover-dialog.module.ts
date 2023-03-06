@@ -13,7 +13,7 @@ import { FoverLoadingModule } from '../loading';
         CommonModule,
         FoverCheckboxModule,
         FoverButtonModule,
-        FoverLoadingModule
+        FoverLoadingModule,
     ],
     exports: [
         FoverDialogComponent,

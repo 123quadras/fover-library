@@ -1,0 +1,26 @@
+<div class="container-example" setThemeNameClass>
+        
+    <!-- Example Component -->
+    <ng-content></ng-content>
+
+    <!-- Options itens -->
+    <div class="container-options-itens">
+        <i 
+            class="icon-options fover-document-copy"
+            (click)="copyCodeDefault()">
+        </i>
+        <i 
+            class="icon-options"
+            [class.fover-eye-slash]="showCodeDefault"
+            [class.fover-document-code]="!showCodeDefault"
+            (click)="showCodeDefault = !showCodeDefault">
+        </i>
+    </div>
+
+    <!-- Codes -->
+    <fover-editor
+        *ngIf="showCodeDefault"
+        [code]="codeCopy"
+        [language]="language">
+    </fover-editor>
+</div>
