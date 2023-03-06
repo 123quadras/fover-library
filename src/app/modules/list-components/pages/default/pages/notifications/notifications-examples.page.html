@@ -11,9 +11,33 @@
     </examples-titles>
 
     <!-- Example -->
-    <container-example [codeCopy]="codeDefault">
-        <fover-button
-            (click)="emitNotification()">Emitir notificação
-        </fover-button>
+    <container-example 
+        [codeCopy]="codeDefault"
+        [language]="'typescript'">
+        <div class="container-buttons">
+            
+            <!-- Success -->
+            <fover-button
+                [type]="'success'"
+                (click)="emitNotification('success')">Sucessos
+            </fover-button>
+            
+            <!-- Error -->
+            <fover-button
+                [type]="'error'"
+                (click)="emitNotification('error')">Erros
+            </fover-button>
+            
+            <!-- Info -->
+            <fover-button
+                (click)="emitNotification('info')">Informações
+            </fover-button>
+            
+            <!-- Warning -->
+            <fover-button
+                [type]="'warning'"
+                (click)="emitNotification('warning')">Atenções
+            </fover-button>
+        </div>
     </container-example>
 </div>

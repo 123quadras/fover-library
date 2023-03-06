@@ -3,6 +3,7 @@ import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, 
 import { Subscription, timer } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { FoverNotificationModel } from '../../model/fover-notification.model';
+import { Theme, ThemeService } from '../../../../theme';
 
 @Component({
     selector: 'fover-notification-card',
@@ -32,10 +33,14 @@ export class FoverNotificationCardComponent implements OnInit, OnDestroy
     public currentTime: number = 0;
     public barLineStype: { width?: string } = { width: '0%' }; // Realiza o design da progress bar
     private stop: boolean;
+    public theme: Theme;
     private subscription = new Subscription();
+
+    constructor(private _themeService: ThemeService) {}
 
     ngOnInit(): void 
     {
+        this.theme = this._themeService.getActiveTheme();
         setTimeout(() => this.card.nativeElement.setAttribute('id',`card-notification`), 10);
         setTimeout(() => this.message.nativeElement.setAttribute('id',`card-notification-message`), 10);
 

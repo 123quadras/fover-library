@@ -1,6 +1,7 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { ButtonOptions, BUTTON_OPTIONS } from './button-options';
 import { Theme, ThemeService } from '../../theme';
+import { ButtonType } from './enums/button-type.enum';
 
 @Component({
     selector: 'fover-button',
@@ -10,7 +11,7 @@ import { Theme, ThemeService } from '../../theme';
 export class FoverButtonComponent implements OnInit
 {
     @Input() height: 'xl' | 'l' | 'default' | 'small' | 'mini';
-    @Input() type: 'default' | 'transparent' | 'secondary' | 'border';
+    @Input() type: ButtonType | string = ButtonType.default;
     @Input() disabled: boolean;
     public theme: Theme;
 
@@ -22,6 +23,12 @@ export class FoverButtonComponent implements OnInit
     ngOnInit(): void 
     {
         this.setGlobalConfig();
+        this.getTheme();
+        this._themeService.$setThemeEvent.subscribe(() => this.getTheme());
+    }
+
+    private getTheme(): void
+    {
         this.theme = this._themeService.getActiveTheme();
     }
 

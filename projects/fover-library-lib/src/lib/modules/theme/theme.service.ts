@@ -1,6 +1,7 @@
 import { EventEmitter, Inject, Injectable } from '@angular/core';
 import { ACTIVE_THEME, Theme, THEMES } from './symbols';
 import { ThemeEnum } from './theme.enum';
+import { Subject } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -8,6 +9,7 @@ import { ThemeEnum } from './theme.enum';
 export class ThemeService 
 {
     public themeChange = new EventEmitter<Theme>();
+    public $setThemeEvent = new Subject();
 
     constructor(
         @Inject(THEMES) public themes: Theme[],
@@ -29,6 +31,7 @@ export class ThemeService
     {
         this.theme = _name;
         this.themeChange.emit( this.getActiveTheme());
+        this.$setThemeEvent.next();
         return this.theme;
     }
 }

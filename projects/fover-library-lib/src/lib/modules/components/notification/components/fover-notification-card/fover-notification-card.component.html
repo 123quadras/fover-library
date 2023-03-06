@@ -2,7 +2,7 @@
     #card
     class="card-snackbar" 
     [@fade]="item.stateVisible"
-    [ngClass]="item.status"
+    [ngClass]="item.status + ' ' + theme.name"
     (mouseenter)="fadeStopCard()"
     (mouseleave)="fadeStopCard()">
 
@@ -31,6 +31,10 @@
 
     <!-- Progress bar -->
     <div class="container-progress-bar">
-        <div class="bar-line" [ngStyle]="barLineStype" [ngClass]="item.status"></div>
+        <div 
+            class="bar-line" 
+            [ngStyle]="barLineStype" 
+            [ngClass]="item.status + ' ' + theme.name">
+        </div>
     </div>
 </div>

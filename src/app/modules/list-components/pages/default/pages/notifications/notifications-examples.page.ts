@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FoverNotificationService } from 'fover-library';
+import { FoverNotificationService, FoverNotificationStatusEnum } from 'fover-library';
 
 @Component({
     selector: 'notifications-examples-page',
@@ -16,8 +16,14 @@ export class NotificationsExamplesPage
         this.codeDefault = require('html-loader!./examples/default.ts').default;
     }
 
-    public emitNotification(): void
+    public emitNotification(_type: FoverNotificationStatusEnum | string): void
     {
-        this._foverNotificationService.success(["Essa é uma notificação de teste"]);
+        switch (_type) 
+        {
+            case FoverNotificationStatusEnum.success: this._foverNotificationService.success(["Essa é uma notificação de sucesso."]); break;
+            case FoverNotificationStatusEnum.error: this._foverNotificationService.danger(["Essa é uma notificação de erro."]); break;
+            case FoverNotificationStatusEnum.info: this._foverNotificationService.info(["Essa é uma notificação de informação."]); break;
+            case FoverNotificationStatusEnum.warning: this._foverNotificationService.warning(["Essa é uma notificação de atenção."]); break;
+        }
     }
 }

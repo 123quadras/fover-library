@@ -89,7 +89,6 @@
 
     &.type-secondary
     {
-        background-color: transparent;
         background-color: #0071FF20;
         color: var(--primary);
 
@@ -101,13 +100,58 @@
 
     &.type-border
     {
-        background-color: transparent;
         color: var(--title);
         border-color: var(--border);
+        background-color: transparent;
 
         &:hover
         {
             background-color: #0071FF20;
+        }
+    }
+
+    &.type-success
+    {
+        background-color: var(--success);
+
+        &.dark
+        {
+            color: var(--title);
+        }
+        
+        &.light
+        {
+            color: var(--background-cards);
+        }
+    }
+    
+    &.type-error
+    {
+        background-color: var(--error);
+        
+        &.dark
+        {
+            color: var(--title);
+        }
+        
+        &.light
+        {
+            color: var(--background-cards);
+        }
+    }
+    
+    &.type-warning
+    {
+        background-color: var(--warning);
+        
+        &.dark
+        {
+            color: var(--title);
+        }
+        
+        &.light
+        {
+            color: var(--background-cards);
         }
     }
 }
