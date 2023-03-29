@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FoverNotificationService } from 'fover-library';
+import { ClipboardService } from 'ngx-clipboard';
 
 @Component({
     selector: 'colors',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColorsPage implements OnInit
 {
-    public colors: { name: string, hexa: string }[] = [];
+    public colors: { title: string, itens: { name: string, hexa: string }[] }[] = [];
+
+    constructor(
+        private _clipboardService: ClipboardService,
+        private _foverNotificationService: FoverNotificationService,
+    ) {}
 
     ngOnInit(): void 
     {
@@ -16,21 +23,62 @@ export class ColorsPage implements OnInit
 
     private buildList(): void
     {
-        this.colors = [
-            { name: "--background-page", hexa: '#21272D' },
-            { name: "--background-cards", hexa: '#323741' },
-            { name: "--background-cards-2", hexa: '#2A2E36' },
-            { name: "--background-cards-3", hexa: '#000' },
-            { name: "--border", hexa: '#484B55' },
-            { name: "--title", hexa: '#fff' },
-            { name: "--placeholder", hexa: '#808289' },
-            { name: "--primary", hexa: '#0071FF' },
-            { name: "--error", hexa: '#f2135d' },
-            { name: "--success", hexa: '#17c964' },
-            { name: "--warning", hexa: '#ff8200' },
-            { name: "--warning-font", hexa: '#cc9500' },
-            { name: "--warning-background", hexa: '#FFEADB' },
-            { name: "--error-background", hexa: '#FFDBDB' },
+        this.colors = 
+        [
+            {
+                title: "Backgrounds",
+                itens: 
+                [
+                    { name: "background-page", hexa: "#F4F7F8" },
+                    { name: "background-cards", hexa: "#FFFFFF" },
+                    { name: "background-cards-2", hexa: "#EEF2F4" },
+                ]
+            },
+            {
+                title: "Tipografias",
+                itens: 
+                [
+                    { name: "title", hexa: "#2C3E50" },
+                    { name: "placeholder", hexa: "#B1B2B4" },
+                ]
+            },
+            {
+                title: "Border",
+                itens: 
+                [
+                    { name: "border", hexa: "#DDDDDD" },
+                ]
+            },
+            {
+                title: "Defaults",
+                itens: 
+                [
+                    { name: "primary", hexa: "#814CF1" },
+                    { name: "primary-1", hexa: "#811EF1" },
+                    { name: "primary-2", hexa: "#8178F1" },
+                ]
+            },
+            {
+                title: "Auxiliares",
+                itens: 
+                [
+                    { name: "success", hexa: "#17c964" },
+                    { name: "success-1", hexa: "#17A064" },
+                    { name: "success-2", hexa: "#17F064" },
+                    { name: "error", hexa: "#f2135d" },
+                    { name: "error-1", hexa: "#BE154D" },
+                    { name: "error-2", hexa: "#F2505D" },
+                    { name: "warning", hexa: "#FFA000" },
+                    { name: "warning-1", hexa: "#FF8200" },
+                    { name: "warning-2", hexa: "#FFBE00" },
+                ]
+            },
         ];
+    }
+
+    public copyName(_item: { name: string, hexa: string }): void
+    {
+        this._clipboardService.copy(`var(--${_item.name})`);
+        this._foverNotificationService.success(["Valor copiado com sucesso."]);
     }
 }

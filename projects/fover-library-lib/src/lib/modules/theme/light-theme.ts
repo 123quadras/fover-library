@@ -6,23 +6,32 @@ export const lightTheme: Theme =
     name: ThemeEnum.light,
     properties: 
     {
-        // Alterados
+        // Backgrounds
         '--background-page': '#F4F7F8',
-        '--background-cards': '#fff',
+        '--background-cards': '#FFFFFF',
         '--background-cards-2': '#EEF2F4',
-        '--background-cards-3': '#222',
 
-        '--title': '#2c3e50',
-        '--border': '#ddd',
-        '--primary': '#814CF1',
-        '--primary-background': '#CBB7F6',
+        // Tipografias
+        '--title': '#2C3E50',
         '--placeholder': '#B1B2B4',
         
-        '--error': '#f2135d',
-        '--error-background': '#FFDBDB',
+        // Borders
+        '--border': '#DDDDDD',
+        
+        // Defaults
+        '--primary': '#814CF1',
+        '--primary-1': '#811EF1',
+        '--primary-2': '#8178F1',
+        
+        // Auxiliares
         '--success': '#17c964',
-        '--warning': '#ff8200',
-        '--warning-font': '#cc9500',
-        '--warning-background': '#F4F2E9',
+        '--success-1': '#17A064',
+        '--success-2': '#17F064',
+        '--error': '#f2135d',
+        '--error-1': '#BE154D',
+        '--error-2': '#F2505D',
+        '--warning': '#FFA000',
+        '--warning-1': '#FF8200',
+        '--warning-2': '#FFBE00',
     }
 };

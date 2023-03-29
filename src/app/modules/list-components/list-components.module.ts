@@ -14,6 +14,7 @@ import { DialogExamplesModule } from './pages/default/pages/dialog/dialog-exampl
 import { LoadingsExamplesModule } from './pages/default/pages/loadings/loadings-examples.module';
 import { ModalsExamplesModule } from './pages/default/pages/modals/modals-examples.module';
 import { NotificationsExamplesModule } from './pages/default/pages/notifications/notifications-examples.module';
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { NotificationsExamplesModule } from './pages/default/pages/notifications
     imports: [
         SharedModule,
         ListComponentsRoutingModule,
+        ClipboardModule,
         // Exemplos de componentes
         ButtonsExamplesModule,
         AlertsExamplesModule,

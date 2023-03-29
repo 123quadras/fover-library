@@ -8,18 +8,32 @@
     <p class="message">Para usar os icones basta utilizar sass em seu projeto e utilizar o atributo `var()` como no exemplo à baixo:</p>
 
     <!-- Colos -->
-    <div class="container-card-colors">
+    <div class="container-colors-global">
         <ng-container *ngFor="let item of colors">
-            <div class="container-color">
-    
-                <!-- Card color -->
-                <div 
-                    class="card-color"
-                    [style.background-color]="item.hexa">
-                </div>
-    
+            <div class="container-color-topic">
+                
                 <!-- Title -->
-                <p class="title">{{ item.name }}</p>
+                <h6 class="title-card-topic">{{ item.title }}</h6>
+    
+                <!-- List cards -->
+                <div class="container-list-cards">
+                    <ng-container *ngFor="let itemColor of item.itens">
+                        <div class="card-color" (click)="copyName(itemColor)">
+    
+                            <!-- Square -->
+                            <div 
+                                class="square-color"
+                                [style.background-color]="itemColor.hexa">
+                            </div>
+    
+                            <!-- Name -->
+                            <p class="name">{{ itemColor.name }}</p>
+                            
+                            <!-- Hexa -->
+                            <p>{{ itemColor.hexa }}</p>
+                        </div>
+                    </ng-container>
+                </div>
             </div>
         </ng-container>
     </div>

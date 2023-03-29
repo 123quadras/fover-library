@@ -19,7 +19,8 @@ export class MenuLateralComponent implements OnInit
     
     private buildList(): void
     {
-        this.listItens = [
+        this.listItens = 
+        [
             { routerLink: "buttons", description: "Buttons" },
             { routerLink: "inputs", description: "Inputs" },
             { routerLink: "dialogs", description: "Dialogs" },

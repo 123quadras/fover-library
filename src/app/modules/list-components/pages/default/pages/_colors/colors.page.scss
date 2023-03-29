@@ -17,32 +17,46 @@
         margin-bottom: 8px;
     }
 
-    .container-card-colors
+    .container-colors-global
     {
         display: flex;
-        align-items: center;
         flex-wrap: wrap;
-        grid-gap: 12px;
-        padding: 5px;
+        gap: 21px 100px;
 
-        .container-color
+        .container-color-topic
         {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            grid-gap: 12px;
-
-            .card-color
+            .title-card-topic
             {
-                width: 60px;
-                height: 60px;
-                border-radius: 10px;
-                border: solid 1px var(--border);
+                margin-top: 32px;
+                margin-bottom: 21px;
             }
-
-            .title
+    
+            .container-list-cards
             {
-                font-size: 14px;
+                display: flex;
+                grid-gap: 12px;
+    
+                .card-color
+                {
+                    font-size: 12px;
+                    cursor: pointer;
+    
+                    .square-color
+                    {
+                        $size: 100px;
+                        width: $size;
+                        height: $size;
+                        margin-bottom: 8px;
+                        border-radius: 10px;
+                        box-shadow: $box-shadow-light;
+                        border: solid 1px var(--border);
+                    }
+    
+                    .name
+                    {
+                        margin-bottom: 6px;
+                    }
+                }
             }
         }
     }
