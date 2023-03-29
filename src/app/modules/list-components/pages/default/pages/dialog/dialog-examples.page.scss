@@ -4,4 +4,14 @@
 {
     padding: 82px 200px;
     box-sizing: border-box;
+
+    .container-example-component
+    {
+        margin-top: 32px;
+
+        .title
+        {
+            margin-bottom: 12px;
+        }
+    }
 }

@@ -43,36 +43,6 @@
     }
 }
 
-@mixin height 
-{
-    &.height-xl 
-    {
-        padding: 15px 20px;
-        font-size: 16px;
-        border-radius: 20px;
-    }
-    
-    &.height-l 
-    {
-        font-size: 15px;
-        padding: 10px 15px;
-        border-radius: 15px;
-    }
-
-    &.height-small 
-    {
-        font-size: 13px;
-        padding: 5px 10px;
-        border-radius: 9px;
-    }
-
-    &.height-mini 
-    {
-        padding: 3px 8px;
-        font-size: 12px;
-        border-radius: 7px;
-    }
-}
 
 @mixin type 
 {
@@ -159,6 +129,5 @@
 .button-content
 {
     @include btn-base();
-    @include height();    
     @include type();
 }

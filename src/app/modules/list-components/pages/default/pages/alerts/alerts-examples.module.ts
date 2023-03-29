@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { AlertsExamplesPage } from './alerts-examples.page';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { FoverAlertModule } from 'fover-library';
 
 @NgModule({
     declarations: [
@@ -9,7 +8,6 @@ import { FoverAlertModule } from 'fover-library';
     ],
     imports: [
         SharedModule,
-        FoverAlertModule,
     ],
     exports: [
         AlertsExamplesPage,

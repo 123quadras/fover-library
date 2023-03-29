@@ -14,7 +14,9 @@ export class FoverEditorComponent implements OnInit
         language: 'html',
         readOnly: true,
         scrollBeyondLastLine: false,
-        wordWrap: false,
+        
+        wrappingStrategy: "advanced",
+        
         minimap: {
             enabled: false
         },

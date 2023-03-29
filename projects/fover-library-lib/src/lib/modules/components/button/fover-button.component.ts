@@ -10,7 +10,6 @@ import { ButtonType } from './enums/button-type.enum';
 })
 export class FoverButtonComponent implements OnInit
 {
-    @Input() height: 'xl' | 'l' | 'default' | 'small' | 'mini';
     @Input() type: ButtonType | string = ButtonType.default;
     @Input() disabled: boolean;
     public theme: Theme;
@@ -36,7 +35,6 @@ export class FoverButtonComponent implements OnInit
     {
         if (this.options)
         {
-            this.height = this.options.height ?? this.height ?? 'default';
             this.type = this.options.type ?? this.type ?? 'default';
         }
     }

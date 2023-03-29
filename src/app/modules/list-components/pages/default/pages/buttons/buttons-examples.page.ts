@@ -11,12 +11,10 @@ export class ButtonsExamplesPage
     public showCodeTypes: boolean;
     public codeDefault: string;
     public codeTypes: string;
-    public codeSizes: string;
 
     constructor() 
     {
         this.codeDefault = require('html-loader!./examples/default.html').default;
         this.codeTypes = require('html-loader!./examples/types.html').default;
-        this.codeSizes = require('html-loader!./examples/sizes.html').default;
     }
 }

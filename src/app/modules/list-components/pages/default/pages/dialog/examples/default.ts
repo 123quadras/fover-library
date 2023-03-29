@@ -4,6 +4,7 @@ export class DialogExamplesPage
 {
     constructor(private _foverDialogService: FoverDialogService) {}
 
+    
     public openDialog(): void
     {
         this._foverDialogService.open({

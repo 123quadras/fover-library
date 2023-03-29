@@ -9,11 +9,13 @@ import { FoverDialogService, FoverDialogTypeEnum } from 'fover-library';
 export class DialogExamplesPage
 {
     public codeDefault: string;
+    public codeConfig: string;
     public showCodeDefault: boolean;
 
     constructor(private _foverDialogService: FoverDialogService) 
     {
         this.codeDefault = require('html-loader!./examples/default.ts').default;
+        this.codeConfig = require('html-loader!./examples/config.ts').default;
     }
 
     public openDialog(): void

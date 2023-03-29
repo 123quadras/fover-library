@@ -1,9 +1,9 @@
-import { Injectable } from "@angular/core";
-import { Theme, ThemeEnum, ThemeService } from "fover-library";
-import { Subject } from "rxjs";
+import { Injectable } from '@angular/core';
+import { Theme, ThemeEnum, ThemeService } from 'fover-library';
+import { Subject } from 'rxjs';
 
 @Injectable({
-    providedIn: "root"
+    providedIn: 'root'
 })
 export class ConfigHelp
 {

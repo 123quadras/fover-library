@@ -7,15 +7,37 @@
     <!-- Title -->
     <examples-titles
         [title]="'Default'"
-        [subTitle]="'Gera um dialog de confirmação.'">
+        [subTitle]="'Gera um dialog de confirmação. Para utilziar esse componente, é necessário antes, fazer uma configuração de uso, pois o HTML do dialog, é injetado no DOM via serviço.'">
     </examples-titles>
 
     <!-- Example -->
-    <container-example 
-        [codeCopy]="codeDefault"
-        [language]="'typescript'">
-        <fover-button
-            (click)="openDialog()">Abrir dialog
-        </fover-button>
-    </container-example>
+    <div class="container-example-component">
+        
+        <!-- Title -->
+        <h2 class="title">Componente de configuração</h2>
+
+        <!-- Example -->
+        <container-example 
+            [codeCopy]="codeConfig"
+            [language]="'typescript'">
+            <fover-button
+                (click)="openDialog()">Abrir dialog
+            </fover-button>
+        </container-example>
+    </div>
+
+    <div class="container-example-component">
+
+        <!-- Title -->
+        <h2 class="title">Componente de configuração</h2>
+
+        <!-- Example -->
+        <container-example 
+            [codeCopy]="codeDefault"
+            [language]="'typescript'">
+            <fover-button
+                (click)="openDialog()">Abrir dialog
+            </fover-button>
+        </container-example>
+    </div>
 </div>
